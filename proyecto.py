@@ -12,7 +12,7 @@ marca = str(input("ingrese la marca que desea ver:"))
 if marca == marca1:
   print("disponibilidad de",marca1)
   print(marca1, modelo_t1, cantidad)
-  print(marca1, modelo_t2, cantidad)      #en inventario deberia ir cantidad de marcas y cantidad de cada tipo de modelo
+  print(marca1, modelo_t2, cantidad)      #en inventario deberia ir cantidad de marcas y cantidad de cada tipo de modelo o se podria establecer una cantidad de modelos en variables
   print(marca1, modelo_t3, cantidad)
   
 elif marca == marca2:
