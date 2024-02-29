@@ -30,7 +30,12 @@ def register():
 
 register()
 
+def ingreso():
+    user = input("Ingrese su usuario: ")
+    password = input("Ingrese su contraseña: ")
 
+    if not len(user or password) < 1:
+        pass
 
 
 
