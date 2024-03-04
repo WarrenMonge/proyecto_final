@@ -1,0 +1,62 @@
+Documentacion del proyecto Fiderents
+
+    |Diagrama de Bloques General|
+              |
+    +---------------------+
+    | Sistema de Reservas |
+    +---------------------+
+              |
+      +-------v------+
+      |  Gestión de  |
+      |   Inventario |
+      +--------------+
+      |  Gestión de  |
+      |    Sedes     |
+      +--------------+
+      | Gestión de   |
+      |   Clientes   |
+      +--------------+
+      | Gestión de   |
+      |  Reservas    |
+      +--------------+
+
+
+Desglose de Requerimientos
+1-  Gestion de inventario
+*  Agrega vehiculos.
+*  Registrar los datos del vehiculo.
+*  Actulizar disponibilidad por modelo.
+*  Asignar la cantidad disponible por modelo.
+*  Inabhilitar vehiculos.
+
+
+2-Gestión de Sedes
+*  Establecer horarios de atención.
+*  Cambiar sede manteniendo la integridad del inventario.
+*  Agregar sede actual.
+
+
+3-Gestión de Clientes
+*  Proporcionar información necesaria al usauario.
+*  Ingresar como un invitado o un cliente registrado.
+*  Reservar como un cliente registrado.
+*  Acceder al inventario como un invitado.
+
+4-Gestión de Reservas
+*  Ver la lista de reservas activas, cancelar o marcar como entregado.
+*  Seleccionar modelo y reservar según disponibilidad y horario de cada sede.
+*  Calcular precio de reserva y el seguro.
+*  Ver la lista de marcas y con disponibilidad.
+
+
+Descripción General de la Solución
+
+
+
+
+
+Fecha de Entrega	Requerimiento	Actividades	Responsables
+MM/DD/AAAA	            1	           1-5	  Desarrollador
+MM/DD/AAAA	            2	           1-3	  Desarrollador
+MM/DD/AAAA	            3	           1-4	  Desarrollador
+MM/DD/AAAA	            4	           1-4	  Desarrollador
