@@ -1,10 +1,17 @@
 #Documentacion del proyecto Fiderents
+
 Integrantes a cargo
+
 Emanuel Chaves Vindas
+
 Warren Monge Jirón
+
 Aaron Chaves Cascante
+
 Erick Isaac Portocarrero Hawell
+
 Jair Solano Navarro
+
 
     |Diagrama de Bloques General|
               |
@@ -94,15 +101,24 @@ Descripción de Actividades por Requerimiento del Proyecto
 5-Visualizar vehículos
 
 * Requerimiento Avance 2
+  
 1- Cambiar de sede
+
 2- Ingreso como invitado
+
 3- Visualizar vehículos
+
 4- Creación de reserva
 
+
 * Requerimiento Avance 3
+  
 1- Inhabilitar vehículos
+  
 2- Visualizar reservas
+
 3- Gestión de reservas activas
+
 
 
 
