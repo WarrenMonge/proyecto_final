@@ -1,14 +1,14 @@
 #Proyecto final
 
-marcas = ["toyota", "nissan", "subaru","toyota"]
+marcas = ["toyota", "nissan", "subaru","toyota","ford"]
 marca_unique = []
-modelos = ["yaris","altima","wrx","supra"]
+modelos = ["yaris","altima","wrx","supra","fiesta"]
 modelo_unique = []
-years = ["2012","2008","2010","1990"]
+years = ["2012","2008","2010","1990","2005"]
 year_unique = []
-cc = ["1500cc","2500cc","2400cc","3000cc"]
+cc = ["1500cc","2500cc","2400cc","3000cc","2000cc"]
 cc_unique = []
-state = ["Disponible","Disponible","Disponible","Disponible"]
+state = ["Disponible","Disponible","Disponible","Disponible","Disponible"]
 price_ad = []
 price_car = []
 #DATOS COLOCADOS ACA SOLAMENTE SON PRUEBAS
@@ -44,29 +44,12 @@ while True:
         for i in range(len(marca_unique)):
             print(i ,"-", marca_unique[i]) 
         marca_search = int(input())
-        if marca_search == 0:
-            print("Cual auto desea inhabilitar:")
-            for x in range(len(modelos)):
-                if marcas[marca_search] == marcas[x]:
-                    print(x ,"-", modelos[x],",", years[x],",",cc[x])
-            car_search = int(input())
-            state[car_search] = "Inhabilitado"
-        elif marca_search == 1:             
-            print("Cual auto desea inhabilitar:")
-            for x in range(len(modelos)):
-                if marcas[marca_search] == marcas[x]:
-                    print(x ,"-", modelos[x],",", years[x],",",cc[x])
-            car_search = int(input())
-            state[car_search] = "Inhabilitado"
-        elif marca_search == 2:
-            print("Cual auto desea inhabilitar:")
-            for x in range(len(modelos)):
-                if marcas[marca_search] == marcas[x]:
-                    print(x ,"-", modelos[x],",", years[x],",",cc[x])
-            car_search = int(input())
-            state[car_search] = "Inhabilitado"
-        else:
-            print("Has colocado una opcion invalida")
+        print("Cual auto desea inhabilitar:")
+        for x in range(len(modelos)):
+            if marca_unique[marca_search] == marcas[x]:
+                print(x ,"-", modelos[x],",", years[x],",",cc[x])
+        car_search = int(input())
+        state[car_search] = "Inhabilitado"
     elif gest_ans == 3:
         for y in range(len(modelos)):
             print(y ,"-",marcas[y],",", modelos[y],",", years[y],",",cc[y],",",state[y])
