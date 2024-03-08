@@ -77,23 +77,23 @@ if selec_marca == "toyota":
     
 elif selec_marca == "nissan":
     selec_model=str(input("Ingrese el nombre del modelo que desea retirar:"))
-  if selec_model==modelo_n1 and modelo_nc1==0:
+if selec_model==modelo_n1 and modelo_nc1==0:
     print("Disculpe el modelo", modelo_n1,"no está disponible")
-  elif selec_model==modelo_n1 and modelo_nc1>0:
+elif selec_model==modelo_n1 and modelo_nc1>0:
     print("El modelo está disponible")
     model_reserva=selec_model
     modelo_nc1 -= 1
     print("reservó,",marca2, selec_model)
-  elif selec_model==modelo_n2 and modelo_nc2==0:
+elif selec_model==modelo_n2 and modelo_nc2==0:
     print("Disculpe el modelo", modelo_n2,"no está disponible")
-  elif selec_model==modelo_n2 and modelo_nc2>0:
+elif selec_model==modelo_n2 and modelo_nc2>0:
     print("El modelo esta disponible")
     model_reserva=selec_model
     modelo_nc2 -= 1
     print("reservó,",marca2, selec_model)
-  elif selec_model==modelo_n3 and modelo_nc3==0:
+elif selec_model==modelo_n3 and modelo_nc3==0:
     print("Disculpe el modelo", modelo_n3,"no está disponible")
-  elif selec_model==modelo_n3 and modelo_nc3>0:
+elif selec_model==modelo_n3 and modelo_nc3>0:
     print("El modelo esta disponible")
     model_reserva=selec_model
     modelo_nc3 -= 1
@@ -101,23 +101,23 @@ elif selec_marca == "nissan":
     
 elif selec_marca=="hyundai":
     selec_model=str(input("Ingrese el nombre del modelo que desea retirar:"))
-  if selec_model==modelo_h1 and modelo_hc1==0:
+if selec_model==modelo_h1 and modelo_hc1==0:
     print("Disculpe el modelo", modelo_h1,"no está disponible")
-  elif selec_model==modelo_h1 and modelo_hc1>0:
+elif selec_model==modelo_h1 and modelo_hc1>0:
     print("El modelo está disponible")
     model_reserva=selec_model
     modelo_hc1 -= 1
     print("reservó,",marca3, selec_model)
-  elif selec_model==modelo_h2 and modelo_hc2==0:
+elif selec_model==modelo_h2 and modelo_hc2==0:
     print("Disculpe el modelo", modelo_h2,"no está disponible")
-  elif selec_model==modelo_h2 and modelo_hc2>0:
+elif selec_model==modelo_h2 and modelo_hc2>0:
     print("El modelo está disponible")
     model_reserva=selec_model
     modelo_hc2 -= 1
     print("reservó,",marca3, selec_model)
-  elif selec_model==modelo_h3 and modelo_hc3==0:
+elif selec_model==modelo_h3 and modelo_hc3==0:
     print("Disculpe el modelo", modelo_h3,"no está disponible")
-  elif selec_model==modelo_h3 and modelo_hc3>0:
+elif selec_model==modelo_h3 and modelo_hc3>0:
     print("El modelo está disponible")
     model_reserva=selec_model
     modelo_hc3 -= 1
