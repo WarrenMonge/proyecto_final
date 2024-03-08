@@ -50,6 +50,7 @@ def ingreso():
                     if password == data[user]:
                         print("Iniciaste sesion correctamente")
                         print("Bienvenido, ", user)
+                        visualizar_carros()
                     else:
                         print("Usuario o contrase;a incorrecto!!")
                 except:
