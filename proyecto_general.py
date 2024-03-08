@@ -27,6 +27,7 @@ def register():
         db = open("login.txt", "a")
         db.write(user + ", " + password + "\n")
         print("Se registro con exito!!")
+        menu()
 
 def ingreso():
     db = open("login.txt", "r")
