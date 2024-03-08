@@ -123,7 +123,10 @@ Descripción de Actividades por Requerimiento del Proyecto
 
 
 
-*    Cronograma de Desarrollo del Proyecto
+
+
+
+
 
 
 | Fecha de Entrega | Requerimiento |             Actividades             |              Responsables             |
