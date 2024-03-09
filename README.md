@@ -135,9 +135,9 @@ prueba
 | 3/8/2024          | 1             | 1.Documentación                    | Emanuel Chaves Vindas                 |                    
 |                   |               | 2.Creación del repositorio         | Jair Solano Navarro                   |                 
 |                   |               |  en Github o Gitlab.               | Aaron Chaves Cascante                 |                
-|                   |               | 3.Gestión inventario vehículos     | Warren Monge Jirón                    |               
-|                   |               | 4.ingreso como cliente registrado  | Erick Isaac Portocarrero Hawell       |                             
-|                   |               | 5.Visualizar vehículos             |                                       |
+|                   |               | 3.Gestión inventario vehículos     | Erick Isaac Portocarrero Hawell                    |               
+|                   |               | 4.ingreso como cliente registrado  | Warren Monge Jirón       |                             
+|                   |               | 5.Visualizar vehículos             |   Aaron Chaves Cascante  |
 |-------------------|---------------|------------------------------------|---------------------------------------|
 | 3/22/2024         | 2             | 1.Cambiar de sede                  |                                      
 |                   |               | 2.Ingreso como invitado            |                                       
