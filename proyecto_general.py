@@ -233,7 +233,22 @@ def ingreso():
                     if password == data[user]:
                         print("Iniciaste sesion correctamente")
                         print("Bienvenido, ", user)
-                        
+                        while True:
+                            print("""
+Que te gustaria hacer?             
+
+    (1) Visualizar carros
+    (2) Gestion de inventario
+    (3) Salir
+                            """)
+                            menu_login = int(input("Ingrese su opcion: "))
+                            if menu_login == 1:
+                                visualizar_carros()
+                            elif menu_login ==2:
+                                gestion_inventario()
+                            elif menu_login == 3:
+                                print("Muchas gracias, por elegirnos")
+                                break
                     else:
                         print("Usuario o contrase;a incorrecto!!")
                 except:
@@ -245,38 +260,28 @@ def ingreso():
     else:
         print("Ingrese su datos!!")
     
-    while True:
-        print("""
- Que te gustaria hacer?             
 
-    (1) Visualizar carros
-    (2) Gestion de inventario
-    (3) Salir
-        """)
-        menu_login = int(input("Ingrese su opcion: "))
-        if menu_login == 1:
-            visualizar_carros()
-        elif menu_login ==2:
-            gestion_inventario()
-        elif menu_login == 3:
-            print("Muchas gracias, por elegirnos")
-            break
 
 def menu(opc = None):
-    opc = input("""
+    while True:
+        opc = input("""
 Bienvenido a Fiderents
                 
     (1) Iniciar Sesion
-    (2) Registrarte                   
+    (2) Registrarte
+    (3) Salir                   
                     
 Ingrese tu opcion:""")
-    if opc == "1":
-        ingreso()
-    elif opc ==  "2":
-        register()
-    else:
-        print("Ingrese una de las 2 opciones!!")
-        menu()
+        if opc == "1":
+            ingreso()
+        elif opc ==  "2":
+            register()
+        elif opc ==  "3":
+            print("Muchas gracias, por elegirnos")
+            break            
+        else:
+            print("Ingrese una de las 2 opciones!!")
+            menu()
 
 menu()
 
