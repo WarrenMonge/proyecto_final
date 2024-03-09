@@ -36,6 +36,7 @@ Jair Solano Navarro
 
 
 Desglose de Requerimientos
+
 1-  Gestion de inventario
 *  Agrega vehiculos.
 *  Registrar los datos del vehiculo.
