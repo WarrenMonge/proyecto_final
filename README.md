@@ -133,8 +133,7 @@ prueba
 | Fecha de Entrega | Requerimiento |             Actividades             |              Responsables             |
 |-------------------|---------------|------------------------------------|---------------------------------------|
 | 3/8/2024          | 1             | 1.Documentación                    | Emanuel Chaves Vindas                 |                    
-|                   |               | 2.Creación del repositorio         | Jair Solano Navarro                   |                 
-|                   |               |  en Github o Gitlab.               | Aaron Chaves Cascante                 |                
+|                   |               | 2.Creación del repositorio          | Jair Solano Navarro                   |                 
 |                   |               | 3.Gestión inventario vehículos     | Erick Isaac Portocarrero Hawell                    |               
 |                   |               | 4.ingreso como cliente registrado  | Warren Monge Jirón       |                             
 |                   |               | 5.Visualizar vehículos             |   Aaron Chaves Cascante  |
