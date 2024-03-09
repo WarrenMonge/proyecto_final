@@ -31,22 +31,22 @@ def visualizar_carros():
     modelo_hc3=0
 
 
-    marca = str(input("ingrese la marca que desea ver:"))
+    marca = str(input("Ingrese la marca del vehiculo que desea ver:"))
 
     if marca == marca1:
-        print("disponibilidad de",marca1)
+        print("Disponibilidad de",marca1)
         print(marca1, modelo_t1, modelo_tc1)
         print(marca1, modelo_t2, modelo_tc2)      #en inventario deberia ir cantidad de marcas y cantidad de cada tipo de modelo o se podria establecer una cantidad de modelos en variables
         print(marca1, modelo_t3, modelo_tc3)
     
     elif marca == marca2:
-        print("disponibilidad de",marca2)
+        print("Disponibilidad de",marca2)
         print(marca2, modelo_n1, modelo_nc1)
         print(marca2, modelo_n2, modelo_nc2)
         print(marca2, modelo_n3, modelo_nc3)
     
     elif marca == marca3:
-        print("disponibilidad de",marca3)
+        print("Disponibilidad de",marca3)
         print(marca3, modelo_h1, modelo_hc1)
         print(marca3, modelo_h2, modelo_hc2)
         print(marca3, modelo_h3, modelo_hc3)
@@ -175,14 +175,12 @@ def gestion_inventario():
         if marca not in marca_unique:
             marca_unique.append(marca)     
 
-
-
     while True:
         print("""
-        (1) Agregar vehiculos
-        (2) Inhabilite vehiculos
-        (3) Estado de vehiculos
-        (4) Salir
+    (1) Agregar vehiculos
+    (2) Inhabilite vehiculos
+    (3) Estado de vehiculos
+    (4) Salir
         """)
         gest_ans = int(input("Ingrese su opcion: "))
         if gest_ans == 1:
@@ -247,13 +245,34 @@ def ingreso():
     else:
         print("Ingrese su datos!!")
     
-    visualizar_carros()
+    while True:
+        print("""
+ Que te gustaria hacer?             
+
+    (1) Visualizar carros
+    (2) Gestion de inventario
+    (3) Salir
+        """)
+        menu_login = int(input("Ingrese su opcion: "))
+        if menu_login == 1:
+            visualizar_carros()
+        elif menu_login ==2:
+            gestion_inventario()
+        elif menu_login == 3:
+            print("Muchas gracias, por elegirnos")
+            break
 
 def menu(opc = None):
-    opc = input("Iniciar | Registrarse: ")
-    if opc == "Iniciar":
+    opc = input("""
+Bienvenido a Fiderents
+                
+    (1) Iniciar Sesion
+    (2) Registrarte                   
+                    
+Ingrese tu opcion:""")
+    if opc == "1":
         ingreso()
-    elif opc ==  "Registrarse":
+    elif opc ==  "2":
         register()
     else:
         print("Ingrese una de las 2 opciones!!")
