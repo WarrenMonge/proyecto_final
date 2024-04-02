@@ -1,3 +1,16 @@
+#VARIABLES
+marcas = ["toyota", "nissan", "subaru","toyota","ford"]
+marca_unique = []
+modelos = ["yaris","altima","wrx","supra","fiesta"]
+modelo_unique = []
+years = ["2012","2008","2010","1990","2005"]
+year_unique = []
+cc = ["1500cc","2500cc","2400cc","3000cc","2000cc"]
+cc_unique = []
+state = ["Disponible","Disponible","Disponible","Disponible","Disponible"]
+price_ad = []
+price_car = []
+    #DATOS COLOCADOS ACA SOLAMENTE SON PRUEBAS
 def visualizar_carros():
     #Proyecto final
 #vizualizar vehiculos
@@ -155,18 +168,6 @@ def register():
         print("Se registro con exito!!")
 
 def gestion_inventario():
-    marcas = ["toyota", "nissan", "subaru","toyota","ford"]
-    marca_unique = []
-    modelos = ["yaris","altima","wrx","supra","fiesta"]
-    modelo_unique = []
-    years = ["2012","2008","2010","1990","2005"]
-    year_unique = []
-    cc = ["1500cc","2500cc","2400cc","3000cc","2000cc"]
-    cc_unique = []
-    state = ["Disponible","Disponible","Disponible","Disponible","Disponible"]
-    price_ad = []
-    price_car = []
-    #DATOS COLOCADOS ACA SOLAMENTE SON PRUEBAS
 
     print("Gestion de inventario")
 
@@ -211,6 +212,14 @@ def gestion_inventario():
         else:
             print("Coloca una opcion valida")
 
+def reservacion():
+    print("Reservacion de Autos")
+    while True:
+        print("""
+    (1) Reservar vehiculo
+    (2) Salir
+        """)
+
 
 def ingreso():
     db = open("login.txt", "r")
@@ -239,14 +248,17 @@ Que te gustaria hacer?
 
     (1) Visualizar carros
     (2) Gestion de inventario
-    (3) Salir
+    (3) Crear reservacion
+    (4) Salir
                             """)
                             menu_login = int(input("Ingrese su opcion: "))
                             if menu_login == 1:
                                 visualizar_carros()
                             elif menu_login ==2:
                                 gestion_inventario()
-                            elif menu_login == 3:
+                            elif menu_login ==3:
+                                reservacion()                               
+                            elif menu_login == 4:
                                 print("Muchas gracias, por elegirnos")
                                 break
                     else:
