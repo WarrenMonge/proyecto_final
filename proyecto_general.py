@@ -294,7 +294,7 @@ def cambiar_sede(sede_actual):   # Llama a la función cambiar_sede para cambiar
         return sede_actual
 
 def menu():
-    sede_actual = "San José"  #funcion para saber en cual sede se encuentran 
+    sede_actual = "San José"  #funcion para saber en cual sede se encuentran esto con el fin de hacer que el usuario tenga mas visulacion de la informacion 
     while True:
         opc = input("""
 Bienvenido a Fiderents
