@@ -1,4 +1,4 @@
-#cambio en el registro de las marcas y los modelos, tambien en  disponibilidad
+
 
 #Proyecto final
 #vizualizar vehiculos
@@ -185,34 +185,11 @@ mostrar_menu_horario(marcas_modelos, sedes_horarios)
 
 marca_seleccionada = input("Ingrese la marca del vehículo: ")
 imprimir_disponibilidad(marca_seleccionada)
-if marca_seleccionada == "toyota":
-  marca_seleccionada = input("Ingrese la marca del vehículo: ")
-  modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
-  if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
-      marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
-      print("Reserva realizada con éxito.")
-  else:
-      print("No se pudo realizar la reserva.")
-  
 marca_seleccionada = input("Ingrese la marca del vehículo: ")
-imprimir_disponibilidad(marca_seleccionada)
-if marca_seleccionada == "hyundai":
-  marca_seleccionada = input("Ingrese la marca del vehículo: ")
-  modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
-  if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
-      marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
-      print("Reserva realizada con éxito.")
-  else:
-      print("No se pudo realizar la reserva.")
-  
-marca_seleccionada = input("Ingrese la marca del vehículo: ")
-imprimir_disponibilidad(marca_seleccionada)
-if marca_seleccionada == "nissan":
-  marca_seleccionada = input("Ingrese la marca del vehículo: ")
-  modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
-  if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
-      marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
-      print("Reserva realizada con éxito.")
-  else:
-      print("No se pudo realizar la reserva.")
+modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
+if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
+    marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
+    print("Reserva realizada con éxito.")
+else:
+    print("No se pudo realizar la reserva.")
   
