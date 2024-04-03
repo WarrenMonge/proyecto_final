@@ -1,0 +1,219 @@
+
+
+
+#Proyecto final
+#vizualizar vehiculos
+
+marca1=str("toyota")          #Las marcas y modelos son como ejemplo
+marca2=str("nissan")
+marca3=str("hyundai")
+
+# Diccionario de marcas y modelos
+marcas_modelos = {
+    "toyota": {
+        "yaris": 2,
+        "corolla": 2,
+        "tacoma": 0
+    },
+    "nissan": {
+        "kicks": 0,
+        "murano": 2,
+        "rogue": 0
+    },
+    "hyundai": {
+        "santaFe": 0,
+        "tucson": 2,
+        "venue": 0
+    }
+}
+            
+
+def imprimir_disponibilidad(marca):
+    if marca in marcas_modelos:
+        print(f"Disponibilidad de {marca}:")
+        modelos = marcas_modelos[marca]
+        for modelo, cantidad in modelos.items():
+            print(f"{marca}, {modelo}: {cantidad} unidades disponibles")
+    else:
+        print("Marca no encontrada.")
+
+def verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
+    if marca_seleccionada in marcas_modelos:
+        modelos = marcas_modelos[marca_seleccionada]
+        if modelo_seleccionado in modelos:
+            cantidad_disponible = modelos[modelo_seleccionado]
+            if cantidad_disponible > 0:
+                print(f"El modelo {modelo_seleccionado} está disponible.")
+                return True
+            else:
+                print(f"Disculpe, el modelo {modelo_seleccionado} no está disponible.")
+        else:
+            print(f"Disculpe, el modelo {modelo_seleccionado} no está disponible para la marca {marca_seleccionada}.")
+    else:
+        print("Marca no encontrada  .")
+    return False
+
+
+
+    
+sedes_horarios = {
+    1: {
+        "nombre": "San José",
+        "horario": {
+            "lunes": {"apertura": "00:00", "cierre": "23:59"},
+            "martes": {"apertura": "00:00", "cierre": "23:59"},
+            "miércoles": {"apertura": "00:00", "cierre": "23:59"},
+            "jueves": {"apertura": "00:00", "cierre": "23:59"},
+            "viernes": {"apertura": "00:00", "cierre": "23:59"},
+            "sábado": {"apertura": "00:00", "cierre": "23:59"},
+            "domingo": {"apertura": "00:00", "cierre": "23:59"}
+        }
+    },
+    2: {
+        "nombre": "Alajuela",
+        "horario": {
+            "lunes": {"apertura": "00:00", "cierre": "23:59"},
+            "martes": {"apertura": "00:00", "cierre": "23:59"},
+            "miércoles": {"apertura": "00:00", "cierre": "23:59"},
+            "jueves": {"apertura": "00:00", "cierre": "23:59"},
+            "viernes": {"apertura": "00:00", "cierre": "23:59"},
+            "sábado": {"apertura": "00:00", "cierre": "23:59"},
+            "domingo": {"apertura": "00:00", "cierre": "23:59"}
+        }
+    },
+    3: {
+        "nombre": "Guanacaste",
+        "horario": {
+            "lunes": {"apertura": "04:00", "cierre": "23:00"},
+            "martes": {"apertura": "04:00", "cierre": "23:00"},
+            "miércoles": {"apertura": "04:00", "cierre": "23:00"},
+            "jueves": {"apertura": "04:00", "cierre": "23:00"},
+            "viernes": {"apertura": "04:00", "cierre": "23:00"},
+            "sábado": {"apertura": "04:00", "cierre": "23:00"},
+            "domingo": {"apertura": "04:00", "cierre": "23:00"}
+        }
+    },
+    4: {
+        "nombre": "Limón",
+        "horario": {
+            "lunes": {"apertura": "06:00", "cierre": "22:00"},
+            "martes": {"apertura": "06:00", "cierre": "22:00"},
+            "miércoles": {"apertura": "06:00", "cierre": "22:00"},
+            "jueves": {"apertura": "06:00", "cierre": "22:00"},
+            "viernes": {"apertura": "06:00", "cierre": "22:00"},
+            "sábado": {"apertura": "06:00", "cierre": "22:00"},
+            "domingo": {"apertura": "06:00", "cierre": "22:00"}
+        }
+    },
+    5: {
+        "nombre": "Puntarenas",
+        "horario": {
+            "lunes": {"apertura": "05:00", "cierre": "22:00"},
+            "martes": {"apertura": "05:00", "cierre": "22:00"},
+            "miércoles": {"apertura": "05:00", "cierre": "22:00"},
+            "jueves": {"apertura": "05:00", "cierre": "22:00"},
+            "viernes": {"apertura": "05:00", "cierre": "22:00"},
+            "sábado": {"apertura": "05:00", "cierre": "22:00"},
+            "domingo": {"apertura": "05:00", "cierre": "22:00"}
+        }
+    },
+    6: {
+        "nombre": "Pérez Zeledón",
+        "horario": {
+            "lunes": {"apertura": "07:00", "cierre": "22:00"},
+            "martes": {"apertura": "07:00", "cierre": "22:00"},
+            "miércoles": {"apertura": "07:00", "cierre": "22:00"},
+            "jueves": {"apertura": "07:00", "cierre": "22:00"},
+            "viernes": {"apertura": "07:00", "cierre": "22:00"},
+            "sábado": {"apertura": "07:00", "cierre": "22:00"},
+            "domingo": {"apertura": "07:00", "cierre": "22:00"}
+        }
+    }
+}
+
+def verificar_horario(horario, sede, sedes_horarios):
+    horario_sede = sedes_horarios[sede]["horario"]
+    dia = horario["día"]
+    hora = horario["hora"]
+    
+    if dia.lower() in horario_sede:
+        apertura = horario_sede[dia.lower()]["apertura"]
+        cierre = horario_sede[dia.lower()]["cierre"]
+        if apertura <= hora <= cierre:
+            return True, None
+        else:
+            return False, f"Disculpe, la hora especificada de {horario['tipo']} no es permitida en la sede de {sedes_horarios[sede]['nombre']}. El horario de {dia.capitalize()} es de {apertura} a {cierre}."
+    else:
+        return False, f"Disculpe, la sede de {sedes_horarios[sede]['nombre']} no está abierta el {dia.capitalize()}."
+
+def mostrar_menu_horario(marcas_modelos, sedes_horarios):
+    print("Seleccione la marca y modelo de vehículo que desea rentar:")
+    for marca, modelos in marcas_modelos.items():
+        print(f"{marca}: {', '.join(modelos.keys())}")
+
+    marca_seleccionada = input("Ingrese la marca del vehículo: ")
+    if marca_seleccionada in marcas_modelos:
+        modelo_seleccionado = input("Ingrese el modelo de vehículo que desea rentar: ")
+        if modelo_seleccionado in marcas_modelos[marca_seleccionada]:
+            print(f"Ha seleccionado {marca_seleccionada} {modelo_seleccionado}.")
+
+    print("1 - San José, horario 24 horas, los 7 días de la semana")
+    print("2 - Alajuela, horario 24 horas, los 7 días de la semana")
+    print("3 - Guanacaste, horario:Abren a las 4 am, cierran a las 11 pm")
+    print("4 - Limón, horario:Abren a las 6 am, cierran a las 10 pm")
+    print("5 - Puntarenas, horario: Abren a las 5 am, cierran a las 10 pm")
+    print("6 - Pérez Zeledón, horario: Abren a las 7 am, cierran a las 10 pm")
+    sede_seleccionada = int(input("Ingrese el número de la sede: "))
+    print("Por favor, seleccione el día y la hora para el retiro y entrega del vehículo:")
+    dia_retiro = input("Día de retiro: ").lower()
+    hora_retiro = input("Hora de retiro (HH:MM): ")
+    dia_entrega = input("Día de entrega: ").lower()
+    hora_entrega = input("Hora de entrega (HH:MM): ")
+
+    retiro_valido, retiro_error = verificar_horario({"día": dia_retiro, "hora": hora_retiro, "tipo": "retiro"}, sede_seleccionada, sedes_horarios)
+    entrega_valida, entrega_error = verificar_horario({"día": dia_entrega, "hora": hora_entrega, "tipo": "entrega"}, sede_seleccionada, sedes_horarios)
+
+    if not retiro_valido:
+        print(retiro_error)
+        return
+    elif not entrega_valida:
+        print(entrega_error)
+        return
+    else:
+        print("Horarios de retiro y entrega válidos. Proceda con la reserva.")
+    
+mostrar_menu_horario(marcas_modelos, sedes_horarios)
+
+marca_seleccionada = input("Ingrese la marca del vehículo: ")
+imprimir_disponibilidad(marca_seleccionada)
+if marca_seleccionada == "toyota":
+  marca_seleccionada = input("Ingrese la marca del vehículo: ")
+  modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
+  if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
+      marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
+      print("Reserva realizada con éxito.")
+  else:
+      print("No se pudo realizar la reserva.")
+  
+marca_seleccionada = input("Ingrese la marca del vehículo: ")
+imprimir_disponibilidad(marca_seleccionada)
+if marca_seleccionada == "hyundai":
+  marca_seleccionada = input("Ingrese la marca del vehículo: ")
+  modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
+  if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
+      marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
+      print("Reserva realizada con éxito.")
+  else:
+      print("No se pudo realizar la reserva.")
+  
+marca_seleccionada = input("Ingrese la marca del vehículo: ")
+imprimir_disponibilidad(marca_seleccionada)
+if marca_seleccionada == "nissan":
+  marca_seleccionada = input("Ingrese la marca del vehículo: ")
+  modelo_seleccionado = input("Ingrese el modelo del vehículo: ")
+  if verificar_disponibilidad(marcas_modelos, marca_seleccionada, modelo_seleccionado):
+      marcas_modelos[marca_seleccionada][modelo_seleccionado] -= 1
+      print("Reserva realizada con éxito.")
+  else:
+      print("No se pudo realizar la reserva.")
+  
