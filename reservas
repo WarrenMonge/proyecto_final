@@ -2,6 +2,7 @@
 
 #Proyecto final
 #reservas
+#cambie la forma que tenia la disponibilidad y los modelos en la parte de vizualizar vehiculos de antes
 
 marca1=str("toyota")          #Las marcas y modelos son como ejemplo
 marca2=str("nissan")
