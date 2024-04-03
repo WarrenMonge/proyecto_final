@@ -1,7 +1,7 @@
 
 
 #Proyecto final
-#vizualizar vehiculos
+#reservas
 
 marca1=str("toyota")          #Las marcas y modelos son como ejemplo
 marca2=str("nissan")
