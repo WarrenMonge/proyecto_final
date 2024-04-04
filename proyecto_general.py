@@ -146,6 +146,32 @@ def visualizar_carros():
             modelo_hc3 -= 1
             print("reservó,", marca3, selec_model)
 
+#Ingreso como invitado
+
+def menu_opciones_invitado():
+    
+    print("Iniciaste sesion correctamente como invitado")
+    print("Bienvenido Usuario invitado" )
+    while True:
+        print("""
+Que te gustaria hacer?             
+
+    (1) Visualizar carros
+    (2) Salir
+                            """)
+        menu_login = int(input("Ingrese su opcion: "))
+        if menu_login == 1:
+            visualizar_carros()
+        elif menu_login ==2:
+            print("Muchas gracias, por elegirnos")
+        break            
+
+def inv_user():
+    menu_opciones_invitado()
+
+
+
+
 # Creacion de ingreso como usuario registrado
 def register():
     db = open("login.txt", "r")
@@ -226,7 +252,7 @@ def reservacion():
     (2) Salir
         """)
 
-def ingreso():
+def ingreso(self):
     db = open("login.txt", "r")
     user = input("Ingrese su usuario: ")
     password = input("Ingrese su contraseña: ")
@@ -245,27 +271,7 @@ def ingreso():
             if data[user]:
                 try:
                     if password == data[user]:
-                        print("Iniciaste sesion correctamente")
-                        print("Bienvenido, ", user)
-                        while True:
-                            print("""
-Que te gustaria hacer?             
-
-    (1) Visualizar carros
-    (2) Gestion de inventario
-    (3) Crear reservacion
-    (4) Salir
-                            """)
-                            menu_login = int(input("Ingrese su opcion: "))
-                            if menu_login == 1:
-                                visualizar_carros()
-                            elif menu_login ==2:
-                                gestion_inventario()
-                            elif menu_login ==3:
-                                reservacion()                               
-                            elif menu_login == 4:
-                                print("Muchas gracias, por elegirnos")
-                                break
+                        menu_opciones_invitado()
                     else:
                         print("Usuario o contrase;a incorrecto!!")
                 except:
@@ -301,7 +307,7 @@ Bienvenido a Fiderents
                 
     (1) Iniciar Sesion
     (2) Registrarte
-    (3) Cambiar de Sede
+    (3) Ingreso invitado
     (4) Salir                   
                     
 Ingrese tu opcion:""")
@@ -310,7 +316,7 @@ Ingrese tu opcion:""")
         elif opc ==  "2":
             register()
         elif opc == "3":
-            sede_actual = cambiar_sede(sede_actual)
+            inv_user()
         elif opc ==  "4":
             print("Muchas gracias, por elegirnos")
             break            
