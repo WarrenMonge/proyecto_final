@@ -169,9 +169,6 @@ Que te gustaria hacer?
 def inv_user():
     menu_opciones_invitado()
 
-
-
-
 # Creacion de ingreso como usuario registrado
 def register():
     db = open("login.txt", "r")
@@ -252,7 +249,7 @@ def reservacion():
     (2) Salir
         """)
 
-def ingreso(self):
+def ingreso():
     db = open("login.txt", "r")
     user = input("Ingrese su usuario: ")
     password = input("Ingrese su contraseña: ")
@@ -271,7 +268,30 @@ def ingreso(self):
             if data[user]:
                 try:
                     if password == data[user]:
-                        menu_opciones_invitado()
+                        print("Iniciaste sesion correctamente")
+                        print("Bienvenido, ", user)
+                        while True:
+                            print("""
+Que te gustaria hacer?             
+
+    (1) Visualizar carros
+    (2) Gestion de inventario
+    (3) Crear reservacion
+    (4) Cambiar de Sede
+    (5) Salir
+                            """)
+                            menu_login = int(input("Ingrese su opcion: "))
+                            if menu_login == 1:
+                                visualizar_carros()
+                            elif menu_login ==2:
+                                gestion_inventario()
+                            elif menu_login ==3:
+                                reservacion()
+                            elif menu_login == 4:
+                                sede_actual = cambiar_sede(sede_actual)                               
+                            elif menu_login == 5:
+                                print("Muchas gracias, por elegirnos")
+                                break
                     else:
                         print("Usuario o contrase;a incorrecto!!")
                 except:
