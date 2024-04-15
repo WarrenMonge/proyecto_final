@@ -1,0 +1,11 @@
+elif gest_ans == 2:
+    print("Indique la marca del vehiculo que quiera inhabilitar:")  
+    for i in range(len(marca_unique)):
+        print(i ,"-", marca_unique[i]) 
+    marca_search = int(input())
+    print("Cual auto desea inhabilitar:")
+    for x in range(len(modelos)):                        #funcion de inabilitar vehiculo
+        if marca_unique[marca_search] == marcas[x]:
+            print(x ,"-", modelos[x],",", years[x],",",cc[x])
+    car_search = int(input())
+    state[car_search] = "Inhabilitado"
