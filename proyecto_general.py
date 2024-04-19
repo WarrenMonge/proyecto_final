@@ -450,9 +450,10 @@ def main_menu():
         print("""
     (1) Visualizar inventario
     (2) Realizar reserva
-    (3) Gestion de inventario
-    (4) Cambiar de sede
-    (5) Salir
+    (3) Entrega de vehiculo
+    (4) Gestion de inventario
+    (5) Cambiar de sede
+    (6) Salir
         """)
         ans = int(input("Ingrese su opcion: "))
         if ans == 1:
@@ -462,17 +463,19 @@ def main_menu():
             hacer_reserva(marcas_modelos, sedes_horarios)
             visualizar_reservas()
         elif ans == 3:
-            gestion_inventario()
+            print("Entrega realizada correctamente")
         elif ans == 4:
+            gestion_inventario()
+        elif ans == 5:
             print("Seleccione la sede a la que desea cambiar:")
             for key, value in sedes_horarios.items():
                 print(f"{key}. {value['nombre']} - Horario: {value['horario']}")
             sede_seleccionada = int(input("Ingrese el número correspondiente a la sede deseada: "))
             print(f"Usted ha seleccionado cambiar a la sede {sedes_horarios[sede_seleccionada]['nombre']}.")
-        elif ans == 5:
+        elif ans == 6:
             break
         else:
-            print("Coloca una opcion valida")            
+            print("Coloca una opcion valida")
 
 
 if __name__ == "__main__":
