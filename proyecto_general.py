@@ -396,14 +396,12 @@ def ingreso():
                         main_menu()
                     else:
                         print("Usuario o contrasena incorrecto!!")
-                except:
+                except KeyError:
                     print("Contrasena incorrecta del usuario")
-            else:
-                print("El usuario o contrasena no existe!!")
-        except:
-            print("El usuario o contrasena no existe!!!")
+        except KeyError:
+            print("El usuario o contrasena no existe!!")
     else:
-        print("Ingrese su datos!!")
+        print("Ingrese sus datos!!")
 
 
 def cambiar_sede(sede_actual):   # Llama a la función cambiar_sede para cambiar la sede actual, la cual se basa en la informacion del diccionario para poder ejecutar dicha sede.
