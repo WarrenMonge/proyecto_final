@@ -1,0 +1,5 @@
+Marca: toyota, Modelo: yaris
+Datos del cliente:
+Nombre: Warrem
+Teléfono: 70669818
+
