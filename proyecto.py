@@ -268,7 +268,7 @@ def ingreso():
                     if password == data[user]:
                         print(f"Ingresaste corectamente {user}")
                     else:
-                        print("Usuario o contrase;a incorrecto!!")
+                        print("Usuario o contrasena incorrecto!!")
                 except:
                     print("Contrasena incorrecta del usuario")
             else:
@@ -311,7 +311,7 @@ Ingrese tu opcion:""")
         elif opc ==  "2":
             register()
         elif opc == "3":
-            inv_user()
+            menu_opciones_invitado()
         elif opc ==  "4":
             print("Muchas gracias, por elegirnos")
             break            
