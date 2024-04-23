@@ -457,7 +457,10 @@ def main_menu():
         """)
         ans = int(input("Ingrese su opcion: "))
         if ans == 1:
-            visualizar_carros()
+            for marca, modelos in sorted(marcas_modelos.items()):
+                print(f"{marca.capitalize()}:")
+                for modelo, cantidad in sorted(modelos.items()):
+                    print(f"  - {modelo.capitalize()}: {cantidad}")
         elif ans == 2:
             mostrar_menu_horario(marcas_modelos, sedes_horarios)
             hacer_reserva(marcas_modelos, sedes_horarios)
