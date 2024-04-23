@@ -99,7 +99,7 @@ elif selec_model==modelo_n3 and modelo_nc3>0:
     modelo_nc3 -= 1
     print("reservó,",marca2, selec_model)
     
-elif selec_marca=="hyundai":
+elif selec_marca.lower()=="hyundai":
     selec_model=str(input("Ingrese el nombre del modelo que desea retirar:"))
 if selec_model==modelo_h1 and modelo_hc1==0:
     print("Disculpe el modelo", modelo_h1,"no está disponible")
