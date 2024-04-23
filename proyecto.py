@@ -7,27 +7,27 @@ marca3=str("hyundai")
 
 #Marca 1
 modelo_t1=str("yaris")          
-modelo_tc1=0
+modelo_tc1=1
 modelo_t2=str("corolla")
-modelo_tc2=0
+modelo_tc2=1
 modelo_t3=str("tacoma")
-modelo_tc3=0
+modelo_tc3=1
 
 #Marca 2
 modelo_n1=str("kicks")
-modelo_nc1=0
+modelo_nc1=1
 modelo_n2=str("murano")
-modelo_nc2=0
+modelo_nc2=1
 modelo_n3=str("rogue")
-modelo_nc3=0
+modelo_nc3=1
 
 #Marca 3
 modelo_h1=str("santaFe")
-modelo_hc1=0
+modelo_hc1=1
 modelo_h2=str("tucson")
-modelo_hc2=0
+modelo_hc2=1
 modelo_h3=str("venue")
-modelo_hc3=0
+modelo_hc3=1
 
 
 marca = str(input("ingrese la marca que desea ver:"))
