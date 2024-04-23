@@ -198,7 +198,7 @@ def visualizar_carros():
         print(marca3, modelo_h1, modelo_hc1)
         print(marca3, modelo_h2, modelo_hc2)
         print(marca3, modelo_h3, modelo_hc3)
-
+    '''
     selec_marca = input("Digite el nombre de la marca que desea retirar:")
     if selec_marca == "toyota":
         selec_model = input("Ingrese el nombre del modelo que desea retirar:")
@@ -271,6 +271,7 @@ def visualizar_carros():
             model_reserva = selec_model
             modelo_hc3 -= 1
             print("reservó,", marca3, selec_model)
+    '''
 
 #Ingreso como invitado
 
