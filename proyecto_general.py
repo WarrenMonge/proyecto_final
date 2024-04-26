@@ -38,10 +38,12 @@ def imprimir_disponibilidad(marca):
     if marca in marcas_modelos:
         print(f"Disponibilidad de {marca}:")
         modelos = marcas_modelos[marca]
-        for modelo_info in modelos:
+        for i, modelo_info in enumerate(modelos, start=1):
             modelo = modelo_info["modelo"]
+            year = modelo_info["year"]
+            cc = modelo_info["cc"]
             estado = modelo_info["estado"]
-            print(f"{marca}, {modelo}: Estado - {estado}")
+            print(f"{i}. {marca}, {modelo}, Año: {year}, CC: {cc}: Estado - {estado}")
     else:
         print("Marca no encontrada.")
 
@@ -121,7 +123,7 @@ def hacer_reserva():
 def mostrar_menu_horario():
     print("Seleccione la marca y modelo de vehículo que desea rentar:")
     for marca, modelos in marcas_modelos.items():
-        print(f"{marca}: {', '.join([modelo_info['modelo'] for modelo_info in modelos])}")
+        imprimir_disponibilidad(marca)
 
     marca_seleccionada = input("Ingrese la marca del vehículo: ").lower()
     if marca_seleccionada in marcas_modelos:
