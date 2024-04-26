@@ -8,8 +8,8 @@ year_unique = []
 cc = ["1500cc","2500cc","2400cc","3000cc","2000cc"]
 cc_unique = []
 state = ["Disponible","Disponible","Disponible","Disponible","Disponible"]
-price_ad = []
-price_car = []
+price_ad = [500,800,1000,2000,800]
+price_car = [5000,8000,15000,50000,10000]
 
 sedes_horarios = {
     1: {"nombre": "San José", "horario": "24 horas, los 7 días de la semana"},
@@ -151,127 +151,20 @@ def mostrar_menu_horario(marcas_modelos, sedes_horarios):
 def visualizar_carros():
     # Proyecto final
     # Vizualizar vehiculos
-    marca1 = "toyota"          # Las marcas y modelos son como ejemplo
-    marca2 = "nissan"
-    marca3 = "hyundai"
+    for marca in marcas:
+        if marca not in marca_unique:
+            marca_unique.append(marca)     
+    print("Indique la marca del vehiculo que quiera visualizar:")  
+    for i in range(len(marca_unique)):
+        print(i ,"-", marca_unique[i]) 
+    marca_search = int(input())
+    print()
+    for x in range(len(modelos)):
+        if marca_unique[marca_search] == marcas[x]:
+            print(x ,"-", modelos[x],",", years[x],",",cc[x],",",state[x])
 
-    # Marca 1
-    modelo_t1 = "yaris"
-    modelo_tc1 = 1
-    modelo_t2 = "corolla"
-    modelo_tc2 = 0
-    modelo_t3 = "tacoma"
-    modelo_tc3 = 0
-
-    # Marca 2
-    modelo_n1 = "kicks"
-    modelo_nc1 = 0
-    modelo_n2 = "murano"
-    modelo_nc2 = 0
-    modelo_n3 = "rogue"
-    modelo_nc3 = 0
-
-    # Marca 3
-    modelo_h1 = "santaFe"
-    modelo_hc1 = 0
-    modelo_h2 = "tucson"
-    modelo_hc2 = 0
-    modelo_h3 = "venue"
-    modelo_hc3 = 0
-
-    marca = input("Ingrese la marca del vehiculo que desea ver:")
-
-    if marca == marca1:
-        print("Disponibilidad de", marca1)
-        print(marca1, modelo_t1, modelo_tc1)
-        print(marca1, modelo_t2, modelo_tc2)      # en inventario deberia ir cantidad de marcas y cantidad de cada tipo de modelo o se podria establecer una cantidad de modelos en variables
-        print(marca1, modelo_t3, modelo_tc3)
     
-    elif marca == marca2:
-        print("Disponibilidad de", marca2)
-        print(marca2, modelo_n1, modelo_nc1)
-        print(marca2, modelo_n2, modelo_nc2)
-        print(marca2, modelo_n3, modelo_nc3)
-    
-    elif marca == marca3:
-        print("Disponibilidad de", marca3)
-        print(marca3, modelo_h1, modelo_hc1)
-        print(marca3, modelo_h2, modelo_hc2)
-        print(marca3, modelo_h3, modelo_hc3)
-
-    selec_marca = input("Digite el nombre de la marca que desea retirar:")
-    if selec_marca == "toyota":
-        selec_model = input("Ingrese el nombre del modelo que desea retirar:")
-        if selec_model == modelo_t1 and modelo_tc1 == 0:
-            print("Disculpe el modelo", modelo_t1, "no está disponible")
-        elif selec_model == modelo_t1 and modelo_tc1 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_tc1 -= 1
-            print("reservo,", marca1, selec_model)
-        elif selec_model == modelo_t2 and modelo_tc2 == 0:
-            print("Disculpe el modelo", modelo_t2, "no está disponible")
-        elif selec_model == modelo_t2 and modelo_tc2 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_tc2 -= 1
-            print("reservó,", marca1, selec_model)
-        elif selec_model == modelo_t3 and modelo_tc3 == 0:
-            print("Disculpe el modelo", modelo_t3, "no está disponible")
-        elif selec_model == modelo_t3 and modelo_tc3 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_tc3 -= 1
-            print("reservó,", marca1, selec_model)
-        
-    elif selec_marca == "nissan":
-        selec_model = input("Ingrese el nombre del modelo que desea retirar:")
-        if selec_model == modelo_n1 and modelo_nc1 == 0:
-            print("Disculpe el modelo", modelo_n1, "no está disponible")
-        elif selec_model == modelo_n1 and modelo_nc1 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_nc1 -= 1
-            print("reservó,", marca2, selec_model)
-        elif selec_model == modelo_n2 and modelo_nc2 == 0:
-            print("Disculpe el modelo", modelo_n2, "no está disponible")
-        elif selec_model == modelo_n2 and modelo_nc2 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_nc2 -= 1
-            print("reservó,", marca2, selec_model)
-        elif selec_model == modelo_n3 and modelo_nc3 == 0:
-            print("Disculpe el modelo", modelo_n3, "no está disponible")
-        elif selec_model == modelo_n3 and modelo_nc3 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_nc3 -= 1
-            print("reservó,", marca2, selec_model)
-        
-    elif selec_marca == "hyundai":
-        selec_model = input("Ingrese el nombre del modelo que desea retirar:")
-        if selec_model == modelo_h1 and modelo_hc1 == 0:
-            print("Disculpe el modelo", modelo_h1, "no está disponible")
-        elif selec_model == modelo_h1 and modelo_hc1 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_hc1 -= 1
-            print("reservó,", marca3, selec_model)
-        elif selec_model == modelo_h2 and modelo_hc2 == 0:
-            print("Disculpe el modelo", modelo_h2, "no está disponible")
-        elif selec_model == modelo_h2 and modelo_hc2 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_hc2 -= 1
-            print("reservó,", marca3, selec_model)
-        elif selec_model == modelo_h3 and modelo_hc3 == 0:
-            print("Disculpe el modelo", modelo_h3, "no está disponible")
-        elif selec_model == modelo_h3 and modelo_hc3 > 0:
-            print("El modelo está disponible")
-            model_reserva = selec_model
-            modelo_hc3 -= 1
-            print("reservó,", marca3, selec_model)
-
+  
 #Ingreso como invitado
 
 def menu_opciones_invitado():
@@ -446,7 +339,7 @@ Ingrese tu opcion:""")
 def main_menu():
     while True:
         print("""
-    (1) Visualizar inventario
+    (1) Visualizar vehiculos
     (2) Realizar reserva
     (3) Entrega de vehiculo
     (4) Gestion de inventario
