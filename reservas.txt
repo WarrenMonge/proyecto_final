@@ -1,0 +1,5 @@
+Marca: toyota, Modelo: yaris
+Datos del cliente:
+Nombre: Warren Monge
+Teléfono: 7777
+
