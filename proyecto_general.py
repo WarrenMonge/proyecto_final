@@ -355,7 +355,7 @@ def main_menu():
         elif ans == 2:
             hacer_reserva()
         elif ans == 3:
-            print("Entrega realizada correctamente")
+            visualizar_reservas()
         elif ans == 4:
             gestion_inventario()
         elif ans == 5:

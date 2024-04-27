@@ -3,3 +3,8 @@ Datos del cliente:
 Nombre: Warren Monge
 Teléfono: 7777
 
+Marca: subaru, Modelo: wrx
+Datos del cliente:
+Nombre: Pepito
+Teléfono: 888888
+
