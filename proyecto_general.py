@@ -115,7 +115,7 @@ def hacer_reserva():
             datos_cliente["Nombre"] = input("Ingrese su nombre: ")
             datos_cliente["Teléfono"] = input("Ingrese su número de teléfono: ")
             guardar_reserva(marcas[marca_seleccionada], modelo_seleccionado, datos_cliente)
-            status["modelo"]="No disponible"
+            status["modelo"] = "No disponible"
         else:
             print("No se pudo realizar la reserva.")
     else:
